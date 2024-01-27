@@ -1,0 +1,24 @@
+id;name;brand;price;toolType
+1;Herse rotative;Sicam;1500;TRACTOR
+2;Gyrobroyeur;Gyrax;1000;TRACTOR
+3;Cultivateur;Gyrax;800;TRACTOR
+4;Herse rotative;BCS;3000;ROTOTILLER
+5;Tondeuse à fléau;BCS;2000;ROTOTILLER
+6;Rotoculteur;BCS;3000;ROTOTILLER
+7;Charrue rotative;BCS;1000;ROTOTILLER
+8;Griffe 3 dents;Terrateck;65;HOE
+9;Griffe 5 dents;Terrateck;95;HOE
+10;Lame;Terrateck;50;HOE
+11;Buttoir;Terrateck;35;HOE
+12;Demi-Butteur;Terrateck;90;HOE
+13;Bineuse à doigts;Terrateck;470;HOE
+14;Dents Lelièvre;Terrateck;108;HOE
+15;Bio-disques;Terrateck;208;HOE
+16;Rouleau emietteur;Terrateck;118;HOE
+17;Herse étrille;Terrateck;50;HOE
+18;Sarcloir Oscillant;Terrateck;75;HOE
+19;Sarcloir fil;Terrateck;50;HAND
+20;Sarcloir Oscillant;Terrateck;58;HAND
+21;Herse étrille;Terrateck;102;HAND
+22;Binette;Terrateck;50;HAND
+23;Désherbeur thermique;Terrateck;185;HAND

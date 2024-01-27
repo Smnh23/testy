@@ -1,0 +1,7 @@
+id;idVariety;description;prix;unitFactor;unitName;image
+1;8;Variété précoce. c'est une betterave rouge à la racine ronde et à la peau lisse. De chair rouge foncé. son goût est agréablement sucré et fruité.;1.5;0.25;botte;batch/images/shop/products/beet.jpg
+2;12;La carotte nantaise est une variété française. provenant des maraîchers du pays nantais. obtenue et améliorée dans les années 1860.;2.5;1;kg;batch/images/shop/products/carrot.jpg
+3;107;La variété Agata est une variété précoce à demi-précoce qui est polyvalente en cuisine. De bonne tenue à la cuisson, elle se consomme principalement rissolée ou en gratin.;2;1;kg;batch/images/shop/products/potato.jpg
+4;88;Variété au bulbe légèrement aplati, d'excellente conservation et de bonne productivité. La chair blanche a un goût est assez prononcé. On le consomme cru en salade, ou cuit en plats mijotés.;3;1;kg;batch/images/shop/products/onion.jpg
+5;72;Batavia d'hiver, remarquable par sa couleur et sa souplesse. Elle est craquante et tendre au goût légèrement sucré.;1.5;1;pièce;batch/images/shop/products/lettuce.jpg
+6;115;Originaire du Finistère, en Bretagne, c'est donc une variété résistante et productive aux petits fruits rouges de 50 à 100 grammes. La chair de cette belle tomate est juteuse, acidulée et à d'une excellente saveur.;3;1;kg;batch/images/shop/products/tomato.jpg

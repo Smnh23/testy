@@ -1,0 +1,36 @@
+id;name;taxonomy;family;hybridF1;spacingPlant;spacingRank;yield;exportN;exportP;exportK;fertiN;fertiP;fertiK;price;piece;planning
+1;Ail;Allium sativum;1;false;15;15;0.8;90;45;80;160;115;185;10.00;false;555678890455
+2;Aubergine;Solanum melongena;8;true;45;45;1.5;25;8;50;180;150;200;4.00;false;013467888890
+3;Betterave;Beta vulgaris;5;false;15;30;0.2;95;35;180;140;100;165;3.00;false;012237888890
+4;Blette;Beta vulgaris subsp. vulgaris;5;false;25;25;0.5;90;50;90;90;50;90;3.00;false;130789000000
+5;Carotte;Daucus carota;2;false;5;15;0.1;70;35;125;80;90;200;2.50;false;012307888890
+6;Céleri-branche;Apium graveolens;2;false;30;30;0.5;60;30;160;255;165;200;4.00;false;001234678890
+7;Céleri-rave;Apium graveolens var. rapaceum;2;false;30;30;0.4;75;60;145;175;130;250;3.00;false;012467888890
+8;Chou brocoli;Brassica oleracea var. italica Plenck;4;true;50;50;0.4;40;10;60;140;175;140;4.00;false;222378888901
+9;Chou cabus;Brassica oleracea var. capitata;4;false;50;50;0.8;115;30;185;150;180;145;2.50;false;912237888888
+10;Chou de Bruxelles;Brassica oleracea var. gemmifera;4;false;50;50;0.5;55;15;45;135;140;140;7.00;false;891346007888
+11;Chou kale;Brassica oleracea var. sabellica;4;false;50;50;1;115;30;185;175;90;215;8.00;false;889122223788
+12;Chou-fleur;Brassica oleracea var. botrytis;4;false;50;50;0.8;60;20;65;145;175;145;3.50;false;000013007890
+13;Chou-rave;Brassica oleacea var. gongylodes;4;false;25;25;0.25;120;60;200;120;60;200;4.00;false;123788888890
+14;Concombre;Cucumis sativus;6;true;50;100;2;30;10;45;150;115;175;2.00;false;001378889000
+15;Courge;Cucurbita moschata;6;false;100;100;3;100;30;150;110;120;145;3.00;false;001222378890
+16;Courgette;Cucurbita pepo;6;true;50;100;3;200;110;500;200;110;500;3.50;false;001237888890
+17;Échalion;Allium cepa;1;false;20;20;0.1;70;25;75;100;130;110;5.00;false;045600078900
+18;Échalote;Allium cepa var. aggregatum;1;false;20;20;0.1;60;75;120;60;75;120;8.00;false;455600790000
+19;Épinard;Spinacia oleracea;5;false;25;25;0.1;60;15;80;125;45;150;6.00;false;888889013788
+20;Fenouil;Foeniculum vulgare;2;false;25;25;0.25;180;50;280;180;50;280;3.00;false;223788888901
+21;Fève;Vicia faba;7;false;10;30;0.05;20;60;100;20;60;100;5.00;false;012307900000
+22;Haricot;Phaseolus vulgaris;7;false;5;50;0.025;20;5;25;50;60;80;8.00;false;001237889000
+23;Laitue;Lactuca sativa;3;false;25;25;1;100;50;200;130;150;125;1.50;true;013455678890
+24;Mâche;Valerianella locusta;9;false;15;15;0.02;30;15;50;30;15;50;10.00;false;888900123788
+25;Navet;Brassica rapa;4;false;10;20;0.1;50;35;110;90;85;110;3.00;false;123788888889
+26;Oignon;Allium cepa;1;false;20;20;0.15;70;25;75;100;130;110;3.00;false;004678889000
+27;Panais;Pastinaca sativa;2;false;15;20;0.15;25;25;95;70;95;95;3.50;false;012237888889
+28;Patisson;Cucurbita pepo;6;false;100;100;6;100;30;150;110;120;145;3.00;false;001237888890
+29;Piment;Capsicum frutescens;8;false;30;50;1;35;15;50;200;140;215;15.00;false;012237888900
+30;Poireaux;Allium porrum;1;false;10;20;0.15;70;20;75;115;125;135;3.00;false;912347888888
+31;Pois;Pisum sativum;7;false;5;20;0.01;50;15;30;35;90;65;15.00;false;223788889122
+32;Poivron;Capsicum annuum;8;true;30;50;1;60;20;130;300;70;300;4.00;false;013467888900
+33;Pomme de terre;Solanum tuberosum;8;false;30;50;1;150;45;260;75;75;135;2.00;false;045560789000
+34;Radis;Raphanus sativus;4;false;2;15;0.01;8;6;18;65;60;80;2.00;false;012378888890
+35;Tomate;Solanum lycopersicum;8;false;50;50;4;35;15;65;150;160;170;3.00;false;013467888900

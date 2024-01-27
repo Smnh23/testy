@@ -1,0 +1,9 @@
+id;name;brand;price;nitrogen;phosphorus;potassium;ab
+1;Orga 2;Frayssinet;1;2;2;5;true
+2;Orga 3;Frayssinet;1;3;2;3;true
+3;Orga 6;Frayssinet;1;6;3;3;true
+4;Vegethumus;Frayssinet;1;2.2;1.5;1;true
+5;Richumus;Frayssinet;1;1.8;0.5;0.7;true
+6;Bactor;Frayssinet;1;2.8;1;1.5;true
+7;Bior;Angibaud;1;2;0.8;1.7;true
+8;Guanumus;Angibaud;1;3;2.5;3;true
