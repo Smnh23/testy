@@ -101,209 +101,209 @@ public class BatchConfiguration {
 	private static final String PATH_PESTICIDES = PATH_BATCH+"/farm/pesticides";
 	private static final String PATH_TOOLS = PATH_BATCH+"/farm/tools";
 
-  private @Autowired JobBuilderFactory jobBuilderFactory;
+  // private @Autowired JobBuilderFactory jobBuilderFactory;
   
-  private @Autowired StepBuilderFactory stepBuilderFactory;
+  // private @Autowired StepBuilderFactory stepBuilderFactory;
 
   /* ------------------------- Step Users ------------------------- */
 
-  public @Bean UserReader userReader() throws FileNotFoundException { return new UserReader(PATH_USERS); }
+  // public @Bean UserReader userReader() throws FileNotFoundException { return new UserReader(PATH_USERS); }
   
-  public @Bean UserProcessor userProcessor() { return new UserProcessor(); }
+  // public @Bean UserProcessor userProcessor() { return new UserProcessor(); }
 
-  public @Bean UserWriter userWriter() { return new UserWriter(); }
+  // public @Bean UserWriter userWriter() { return new UserWriter(); }
 
-	public @Bean Step stepUsers() throws FileNotFoundException {
-		return stepBuilderFactory.get(STEP_USERS_NAME)
-			.<UserData, User>chunk(1)
-      .reader(userReader())
-      .processor(userProcessor())
-			.writer(userWriter())
-      .build();
-	}
+	// public @Bean Step stepUsers() throws FileNotFoundException {
+	// 	return stepBuilderFactory.get(STEP_USERS_NAME)
+	// 		.<UserData, User>chunk(1)
+  //     .reader(userReader())
+  //     .processor(userProcessor())
+	// 		.writer(userWriter())
+  //     .build();
+	// }
 
   /* ------------------------- Step Point Sales ------------------------- */
 
-  public @Bean SalePointReader salePointReader() throws FileNotFoundException { return new SalePointReader(PATH_SALE_POINTS); }
+  // public @Bean SalePointReader salePointReader() throws FileNotFoundException { return new SalePointReader(PATH_SALE_POINTS); }
   
-  public @Bean SalePointProcessor salePointProcessor() { return new SalePointProcessor(); }
+  // public @Bean SalePointProcessor salePointProcessor() { return new SalePointProcessor(); }
 
-  public @Bean SalePointWriter salePointWriter() { return new SalePointWriter(); }
+  // public @Bean SalePointWriter salePointWriter() { return new SalePointWriter(); }
 
-	public @Bean Step stepSalePoints() throws FileNotFoundException {
-		return stepBuilderFactory.get(STEP_SALE_POINTS_NAME)
-			.<SalePointData, SalePoint>chunk(1)
-      .reader(salePointReader())
-      .processor(salePointProcessor())
-      .writer(salePointWriter())
-      .build();
-	}
+	// public @Bean Step stepSalePoints() throws FileNotFoundException {
+	// 	return stepBuilderFactory.get(STEP_SALE_POINTS_NAME)
+	// 		.<SalePointData, SalePoint>chunk(1)
+  //     .reader(salePointReader())
+  //     .processor(salePointProcessor())
+  //     .writer(salePointWriter())
+  //     .build();
+	// }
 
   /* ------------------------- Step Products ------------------------- */
 
-  public @Bean ProductReader productReader() throws FileNotFoundException { return new ProductReader(PATH_PRODUCTS); }
+  // public @Bean ProductReader productReader() throws FileNotFoundException { return new ProductReader(PATH_PRODUCTS); }
 
-  public @Bean ProductProcessor productProcessor() { return new ProductProcessor(); }
+  // public @Bean ProductProcessor productProcessor() { return new ProductProcessor(); }
 
-  public @Bean ProductWriter productWriter() { return new ProductWriter(); }
+  // public @Bean ProductWriter productWriter() { return new ProductWriter(); }
 
-	public @Bean Step stepProducts() throws FileNotFoundException {
-		return stepBuilderFactory.get(STEP_PRODUCTS_NAME)
-			.<ProductData, Product>chunk(1)
-      .reader(productReader())
-      .processor(productProcessor())
-			.writer(productWriter())
-      .build();
-	}
+	// public @Bean Step stepProducts() throws FileNotFoundException {
+	// 	return stepBuilderFactory.get(STEP_PRODUCTS_NAME)
+	// 		.<ProductData, Product>chunk(1)
+  //     .reader(productReader())
+  //     .processor(productProcessor())
+	// 		.writer(productWriter())
+  //     .build();
+	// }
 
   /* ------------------------- Step Posts ------------------------- */
 
-  public @Bean PostReader postReader() throws FileNotFoundException { return new PostReader(PATH_POSTS); }
+  // public @Bean PostReader postReader() throws FileNotFoundException { return new PostReader(PATH_POSTS); }
   
-  public @Bean PostProcessor postProcessor() { return new PostProcessor(); }
+  // public @Bean PostProcessor postProcessor() { return new PostProcessor(); }
 	
-  public @Bean PostWriter postWriter() { return new PostWriter(); }
+  // public @Bean PostWriter postWriter() { return new PostWriter(); }
 
-	public @Bean Step stepPosts() throws FileNotFoundException {
-		return stepBuilderFactory.get(STEP_POSTS_NAME)
-			.<PostData, Post>chunk(1)
-      .reader(postReader())
-      .processor(postProcessor())
-			.writer(postWriter())
-      .build();
-	}
+	// public @Bean Step stepPosts() throws FileNotFoundException {
+	// 	return stepBuilderFactory.get(STEP_POSTS_NAME)
+	// 		.<PostData, Post>chunk(1)
+  //     .reader(postReader())
+  //     .processor(postProcessor())
+	// 		.writer(postWriter())
+  //     .build();
+	// }
 
   /* ------------------------- Step Vegetables ------------------------- */
 
-  public @Bean VegetableReader vegetableReader() throws FileNotFoundException { return new VegetableReader(PATH_VEGETABLES); }
+  // public @Bean VegetableReader vegetableReader() throws FileNotFoundException { return new VegetableReader(PATH_VEGETABLES); }
   
-  public @Bean VegetableProcessor vegetableProcessor() { return new VegetableProcessor(); }
+  // public @Bean VegetableProcessor vegetableProcessor() { return new VegetableProcessor(); }
   
-  public @Bean VegetableWriter vegetableWriter() { return new VegetableWriter(); }
+  // public @Bean VegetableWriter vegetableWriter() { return new VegetableWriter(); }
   
-  public @Bean Step stepVegetables() throws FileNotFoundException {
-    return stepBuilderFactory.get(STEP_VEGETABLES_NAME)
-      .<VegetableData, Vegetable>chunk(1)
-      .reader(vegetableReader())
-      .processor(vegetableProcessor())
-      .writer(vegetableWriter())  
-      .build();
-  }
+  // public @Bean Step stepVegetables() throws FileNotFoundException {
+  //   return stepBuilderFactory.get(STEP_VEGETABLES_NAME)
+  //     .<VegetableData, Vegetable>chunk(1)
+  //     .reader(vegetableReader())
+  //     .processor(vegetableProcessor())
+  //     .writer(vegetableWriter())  
+  //     .build();
+  // }
 
   /* ------------------------- Step Varieties ------------------------- */
 
-  public @Bean VarietyReader varietyReader() throws FileNotFoundException { return new VarietyReader(PATH_VARIETIES); }
+  // public @Bean VarietyReader varietyReader() throws FileNotFoundException { return new VarietyReader(PATH_VARIETIES); }
   
-  public @Bean VarietyProcessor varietyProcessor() { return new VarietyProcessor(); }
+  // public @Bean VarietyProcessor varietyProcessor() { return new VarietyProcessor(); }
 
-	public @Bean Step stepVarieties() throws FileNotFoundException {
-		return stepBuilderFactory.get(STEP_VARIETIES_NAME)
-			.<VarietyData, Vegetable>chunk(1)
-      .reader(varietyReader())
-      .processor(varietyProcessor())
-			.writer(vegetableWriter())
-      .build();
-	}
+	// public @Bean Step stepVarieties() throws FileNotFoundException {
+	// 	return stepBuilderFactory.get(STEP_VARIETIES_NAME)
+	// 		.<VarietyData, Vegetable>chunk(1)
+  //     .reader(varietyReader())
+  //     .processor(varietyProcessor())
+	// 		.writer(vegetableWriter())
+  //     .build();
+	// }
 
   /* ------------------------- Step Botanical Families ------------------------- */
 
-  public @Bean BotanicalFamilyReader botanicalFamilyReader() throws FileNotFoundException { return new BotanicalFamilyReader(PATH_BOTANICAL_FAMILIES); }
+  // public @Bean BotanicalFamilyReader botanicalFamilyReader() throws FileNotFoundException { return new BotanicalFamilyReader(PATH_BOTANICAL_FAMILIES); }
   
-  public @Bean BotanicalFamilyProcessor botanicalFamilyProcessor() { return new BotanicalFamilyProcessor(); }
+  // public @Bean BotanicalFamilyProcessor botanicalFamilyProcessor() { return new BotanicalFamilyProcessor(); }
   
-  public @Bean BotanicalFamilyWriter botanicalFamilyWriter() { return new BotanicalFamilyWriter(); }
+  // public @Bean BotanicalFamilyWriter botanicalFamilyWriter() { return new BotanicalFamilyWriter(); }
   
-  public @Bean Step stepBotanicalFamilies() throws FileNotFoundException {
-    return stepBuilderFactory.get(STEP_BOTANICAL_FAMILIES_NAME)
-      .<BotanicalFamilyData, BotanicalFamily>chunk(1)
-      .reader(botanicalFamilyReader())
-      .processor(botanicalFamilyProcessor())
-      .writer(botanicalFamilyWriter())  
-      .build();
-  }
+  // public @Bean Step stepBotanicalFamilies() throws FileNotFoundException {
+  //   return stepBuilderFactory.get(STEP_BOTANICAL_FAMILIES_NAME)
+  //     .<BotanicalFamilyData, BotanicalFamily>chunk(1)
+  //     .reader(botanicalFamilyReader())
+  //     .processor(botanicalFamilyProcessor())
+  //     .writer(botanicalFamilyWriter())  
+  //     .build();
+  // }
 
   /* ------------------------- Step CropCoefficients ------------------------- */
 
-  public @Bean CropCoefficientReader cropCoefficientReader() throws FileNotFoundException { return new CropCoefficientReader(PATH_CROP_COEFFICIENTS); }
+  // public @Bean CropCoefficientReader cropCoefficientReader() throws FileNotFoundException { return new CropCoefficientReader(PATH_CROP_COEFFICIENTS); }
   
-  public @Bean CropCoefficientProcessor cropcoefficientProcessor() { return new CropCoefficientProcessor(); }
+  // public @Bean CropCoefficientProcessor cropcoefficientProcessor() { return new CropCoefficientProcessor(); }
 
-	public @Bean Step stepCropCoefficients() throws FileNotFoundException {
-		return stepBuilderFactory.get(STEP_CROP_COEFFICIENTS_NAME)
-			.<CropCoefficientData, Vegetable>chunk(1)
-      .reader(cropCoefficientReader())
-      .processor(cropcoefficientProcessor())
-			.writer(vegetableWriter())
-      .build();
-	}
+	// public @Bean Step stepCropCoefficients() throws FileNotFoundException {
+	// 	return stepBuilderFactory.get(STEP_CROP_COEFFICIENTS_NAME)
+	// 		.<CropCoefficientData, Vegetable>chunk(1)
+  //     .reader(cropCoefficientReader())
+  //     .processor(cropcoefficientProcessor())
+	// 		.writer(vegetableWriter())
+  //     .build();
+	// }
 
   /* ------------------------- Step Task Types ------------------------- */
 
-  public @Bean TaskTypeReader taskTypeReader() throws FileNotFoundException { return new TaskTypeReader(PATH_TASK_TYPES); }
+  // public @Bean TaskTypeReader taskTypeReader() throws FileNotFoundException { return new TaskTypeReader(PATH_TASK_TYPES); }
   
-  public @Bean TaskTypeProcessor taskTypeProcessor() { return new TaskTypeProcessor(); }
+  // public @Bean TaskTypeProcessor taskTypeProcessor() { return new TaskTypeProcessor(); }
 
-  public @Bean TaskTypeWriter taskTypeWriter() { return new TaskTypeWriter(); }
+  // public @Bean TaskTypeWriter taskTypeWriter() { return new TaskTypeWriter(); }
 
-	public @Bean Step stepTaskTypes() throws FileNotFoundException {
-		return stepBuilderFactory.get(STEP_TASK_TYPES_NAME)
-			.<TaskTypeData, TaskType>chunk(1)
-      .reader(taskTypeReader())
-      .processor(taskTypeProcessor())
-			.writer(taskTypeWriter())
-      .build();
-	}
+	// public @Bean Step stepTaskTypes() throws FileNotFoundException {
+	// 	return stepBuilderFactory.get(STEP_TASK_TYPES_NAME)
+	// 		.<TaskTypeData, TaskType>chunk(1)
+  //     .reader(taskTypeReader())
+  //     .processor(taskTypeProcessor())
+	// 		.writer(taskTypeWriter())
+  //     .build();
+	// }
 
   /* ------------------------- Step Fertilizers ------------------------- */
 
-  public @Bean FertilizerReader fertilizerReader() throws FileNotFoundException { return new FertilizerReader(PATH_FERTILIZERS); }
+  // public @Bean FertilizerReader fertilizerReader() throws FileNotFoundException { return new FertilizerReader(PATH_FERTILIZERS); }
 
-  public @Bean FertilizerProcessor fertilizerProcessor() { return new FertilizerProcessor(); }
+  // public @Bean FertilizerProcessor fertilizerProcessor() { return new FertilizerProcessor(); }
 
-  public @Bean FertilizerWriter fertilizerWriter() { return new FertilizerWriter(); }
+  // public @Bean FertilizerWriter fertilizerWriter() { return new FertilizerWriter(); }
 
-	public @Bean Step stepFertilizers() throws FileNotFoundException {
-		return stepBuilderFactory.get(STEP_FERTILIZERS_NAME)
-			.<FertilizerData, Fertilizer>chunk(1)
-      .reader(fertilizerReader())
-      .processor(fertilizerProcessor())
-			.writer(fertilizerWriter())
-      .build();
-	}
+	// public @Bean Step stepFertilizers() throws FileNotFoundException {
+	// 	return stepBuilderFactory.get(STEP_FERTILIZERS_NAME)
+	// 		.<FertilizerData, Fertilizer>chunk(1)
+  //     .reader(fertilizerReader())
+  //     .processor(fertilizerProcessor())
+	// 		.writer(fertilizerWriter())
+  //     .build();
+	// }
 
   /* ------------------------- Step Pesticides ------------------------- */
 
-  public @Bean PesticideReader pesticideReader() throws FileNotFoundException { return new PesticideReader(PATH_PESTICIDES); }
+  // public @Bean PesticideReader pesticideReader() throws FileNotFoundException { return new PesticideReader(PATH_PESTICIDES); }
 
-  public @Bean PesticideProcessor pesticideProcessor() { return new PesticideProcessor(); }
+  // public @Bean PesticideProcessor pesticideProcessor() { return new PesticideProcessor(); }
 
-  public @Bean PesticideWriter pesticideWriter() { return new PesticideWriter(); }
+  // public @Bean PesticideWriter pesticideWriter() { return new PesticideWriter(); }
 
-	public @Bean Step stepPesticides() throws FileNotFoundException {
-		return stepBuilderFactory.get(STEP_PESTICIDES_NAME)
-			.<PesticideData, Pesticide>chunk(1)
-      .reader(pesticideReader())
-      .processor(pesticideProcessor())
-			.writer(pesticideWriter())
-      .build();
-	}
+	// public @Bean Step stepPesticides() throws FileNotFoundException {
+	// 	return stepBuilderFactory.get(STEP_PESTICIDES_NAME)
+	// 		.<PesticideData, Pesticide>chunk(1)
+  //     .reader(pesticideReader())
+  //     .processor(pesticideProcessor())
+	// 		.writer(pesticideWriter())
+  //     .build();
+	// }
 
   /* ------------------------- Step Tools ------------------------- */
 
-  public @Bean ToolReader toolReader() throws FileNotFoundException { return new ToolReader(PATH_TOOLS); }
+  // public @Bean ToolReader toolReader() throws FileNotFoundException { return new ToolReader(PATH_TOOLS); }
   
-  public @Bean ToolProcessor toolProcessor() { return new ToolProcessor(); }
+  // public @Bean ToolProcessor toolProcessor() { return new ToolProcessor(); }
 
-  public @Bean ToolWriter toolWriter() { return new ToolWriter(); }
+  // public @Bean ToolWriter toolWriter() { return new ToolWriter(); }
 
-	public @Bean Step stepTools() throws FileNotFoundException {
-		return stepBuilderFactory.get(STEP_TOOLS_NAME)
-			.<ToolData, Tool>chunk(1)
-      .reader(toolReader())
-      .processor(toolProcessor())
-			.writer(toolWriter())
-      .build();
-	}
+	// public @Bean Step stepTools() throws FileNotFoundException {
+	// 	return stepBuilderFactory.get(STEP_TOOLS_NAME)
+	// 		.<ToolData, Tool>chunk(1)
+  //     .reader(toolReader())
+  //     .processor(toolProcessor())
+	// 		.writer(toolWriter())
+  //     .build();
+	// }
 
   /* ------------------------- Job ------------------------- */
 
