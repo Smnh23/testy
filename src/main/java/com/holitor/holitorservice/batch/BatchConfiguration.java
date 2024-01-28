@@ -308,20 +308,20 @@ public class BatchConfiguration {
   /* ------------------------- Job ------------------------- */
 
   public @Bean Job job() throws Exception {
-    return jobBuilderFactory.get(JOB_NAME)
+    return null; //jobBuilderFactory.get(JOB_NAME);
       // .start(stepUsers())
-      .start(stepSalePoints())
-      .next(stepFertilizers())
-      .next(stepPesticides())
-      .next(stepBotanicalFamilies())
-      .next(stepVegetables())
-      .next(stepVarieties())
-      .next(stepCropCoefficients())
-      .next(stepTaskTypes())
-      .next(stepProducts())
-      .next(stepPosts())
-      .next(stepTools())
-      .build();
+      // .start(stepSalePoints())
+      // .next(stepFertilizers())
+      // .next(stepPesticides())
+      // .next(stepBotanicalFamilies())
+      // .next(stepVegetables())
+      // .next(stepVarieties())
+      // .next(stepCropCoefficients())
+      // .next(stepTaskTypes())
+      // .next(stepProducts())
+      // .next(stepPosts())
+      // .next(stepTools())
+      // .build();
   }
 
 }

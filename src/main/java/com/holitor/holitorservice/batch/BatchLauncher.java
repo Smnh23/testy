@@ -15,8 +15,8 @@ public class BatchLauncher {
   private @Autowired Job job;
 
   public void perform() throws Exception { 
-    JobParameters parameters = new JobParametersBuilder().toJobParameters();
-    jobLauncher.run(job, parameters);
+    // JobParameters parameters = new JobParametersBuilder().toJobParameters();
+    // jobLauncher.run(job, parameters);
   }
 
 }
