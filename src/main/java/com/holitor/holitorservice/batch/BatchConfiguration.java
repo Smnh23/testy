@@ -309,8 +309,8 @@ public class BatchConfiguration {
 
   public @Bean Job job() throws Exception {
     return jobBuilderFactory.get(JOB_NAME)
-      .start(stepUsers())
-      .next(stepSalePoints())
+      // .start(stepUsers())
+      .start(stepSalePoints())
       .next(stepFertilizers())
       .next(stepPesticides())
       .next(stepBotanicalFamilies())
