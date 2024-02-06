@@ -2,20 +2,27 @@ spring.application.name: holitor-service
 
 spring.config.import: classpath:config.properties
 
+spring.security.user.name: smnh
+spring.security.user.password: SlamPAPA
+
 spring.jpa.database: POSTGRESQL
 spring.jpa.show-sql: true
 spring.jpa.open-in-view: true
 spring.jpa.hibernate.ddl-auto: update
 spring.jpa.properties.hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
 
-spring.datasource.url: jdbc:postgresql://ec2-52-50-161-219.eu-west-1.compute.amazonaws.com:5432/dap5vmh9ijv34o
-spring.datasource.username: balwunurdavdme
-spring.datasource.password: fd9c8ba2f25be14f465b8131544eef0f4c58abe9bc9f63c08c2537bbf9acda09
+# spring.datasource.url: jdbc:postgresql://ec2-52-50-161-219.eu-west-1.compute.amazonaws.com:5432/dap5vmh9ijv34o
+# spring.datasource.username: balwunurdavdme
+# spring.datasource.password: fd9c8ba2f25be14f465b8131544eef0f4c58abe9bc9f63c08c2537bbf9acda09
 
-okta:
-  oauth2:
-    issuer: https://dev-4559045.okta.com/oauth2/default
-    audience: api://default
+spring.datasource.url: jdbc:postgresql://localhost:5432/holitor
+spring.datasource.username: smnh
+spring.datasource.password: SlamPAPA
+
+# okta:
+#   oauth2:
+#     issuer: https://dev-4559045.okta.com/oauth2/default
+#     audience: api://default
 
 server.error.include-message: always
 

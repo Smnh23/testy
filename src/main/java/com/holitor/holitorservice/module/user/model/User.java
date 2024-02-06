@@ -24,15 +24,15 @@ public class User {
   @GenericGenerator(name = "user-generator", strategy = "increment")
   private @Id long id;
   
-  @Column(name = "`okta_id`", unique = true)
-  private String idOkta;
-  
   @OneToOne(targetEntity = Image.class, cascade = CascadeType.ALL)
   @JoinColumn(name = "`image_id`")
   private Image image;
   
   @Column(name = "`pseudo`")
   private String pseudo;
+  
+  @Column(name = "`password`")
+  private String password;
   
   @Column(name = "`email`")
   private String email;

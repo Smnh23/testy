@@ -6,7 +6,6 @@ import java.util.stream.Collectors;
 
 import com.holitor.holitorservice.exception.ApiException;
 import com.holitor.holitorservice.module.image.model.Image;
-import com.holitor.holitorservice.module.user.model.dto.UserOktaDto;
 import com.holitor.holitorservice.module.user.mapper.UserMapper;
 import com.holitor.holitorservice.module.user.model.User;
 import com.holitor.holitorservice.module.user.model.dto.UserDto;
@@ -15,6 +14,7 @@ import com.holitor.holitorservice.module.user.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.lang.Nullable;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
@@ -28,22 +28,11 @@ public class UserService {
   private @Autowired UserRepository userRepository;
   private @Autowired UserMapper userMapper;
 
-  @Transactional(readOnly = true)
-  public boolean existsByIdOkta(UserOktaDto UserOktaDto) { return this.userRepository.existsByIdOkta(UserOktaDto.getIdOkta()); }
-
   @Transactional(readOnly = false)
   public UserDto addUser(UserDto userDto) { 
     User user = this.userMapper.toEntity(userDto);
-    return this.userMapper.toDto(this.userRepository.save(user)); 
-  }
-
-  @Transactional(readOnly = false)
-  public UserDto addUser(UserOktaDto userOktaDto) { 
-    User user = new User();
-    user.setIdOkta(userOktaDto.getIdOkta());
+    user.setPassword(new BCryptPasswordEncoder().encode(user.getPassword())); 
     user.setImage(new Image());
-    user.setPseudo(userOktaDto.getPseudo());
-    user.setEmail(userOktaDto.getEmail());
     return this.userMapper.toDto(this.userRepository.save(user)); 
   }
   
@@ -60,8 +49,9 @@ public class UserService {
   }
 
   @Transactional(rollbackFor = ApiException.class, readOnly = true)
-  public UserDto getUserByIdOkta(String idOkta) { 
-    User user = this.userRepository.findByIdOkta(idOkta).orElseThrow(() -> new ApiException(HttpStatus.NOT_FOUND, "User "+idOkta+" not found !"));
+  public UserDto getUserByPseudo(String pseudo) {
+    User user = this.userRepository.findByPseudo(pseudo)
+      .orElseThrow(() -> new ApiException(HttpStatus.NOT_FOUND, "User "+pseudo+" not found !"));
     return this.userMapper.toDto(user); 
   }
 

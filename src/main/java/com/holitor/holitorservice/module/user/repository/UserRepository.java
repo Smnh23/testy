@@ -1,15 +1,15 @@
 package com.holitor.holitorservice.module.user.repository;
 
-import java.util.Optional;
-
 import com.holitor.holitorservice.module.user.model.User;
+
+import java.util.Optional;
 
 import org.springframework.data.repository.CrudRepository;
 
-public interface UserRepository extends CrudRepository<User, Long> { 
+public interface UserRepository extends CrudRepository<User, Long> {
 
-  public boolean existsByIdOkta(String idOkta);
+  public Optional<User> findByPseudo(String pseudo);
 
-  public Optional<User> findByIdOkta(String idOkta);
+  public Optional<User> findByPseudoAndPassword(String pseudo, String password);
 
 }

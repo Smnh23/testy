@@ -5,7 +5,6 @@ import java.util.List;
 import javax.validation.Valid;
 
 import com.holitor.holitorservice.exception.ApiException;
-import com.holitor.holitorservice.module.user.model.dto.UserOktaDto;
 import com.holitor.holitorservice.module.user.model.dto.UserDto;
 import com.holitor.holitorservice.module.user.service.UserService;
 
@@ -30,9 +29,9 @@ public class UserController {
   
   private @Autowired UserService userService;
 
-  @PostMapping("/user")
+  @PostMapping("/add-user")
   @ResponseStatus(HttpStatus.CREATED)
-  public UserDto addUser(@RequestBody @Valid UserOktaDto userOktaDto) { return this.userService.addUser(userOktaDto); }
+  public UserDto addUser(@RequestBody @Valid UserDto userDto) { return this.userService.addUser(userDto); }
 
   @GetMapping("/users")
   @ResponseStatus(HttpStatus.OK)
@@ -43,6 +42,15 @@ public class UserController {
   public UserDto getUserById(@PathVariable long idUser) {
     UserDto userDto = null;
     try { userDto = this.userService.getUserById(idUser); }
+    catch (ApiException exception) { throw new ResponseStatusException(exception.getCode(), exception.getMessage(), exception); }
+    return userDto;
+  }
+
+  @GetMapping("/login/{pseudo}")
+  @ResponseStatus(HttpStatus.OK)
+  public UserDto getUserByPseudo(@PathVariable String pseudo) {
+    UserDto userDto = null;
+    try { userDto = this.userService.getUserByPseudo(pseudo); }
     catch (ApiException exception) { throw new ResponseStatusException(exception.getCode(), exception.getMessage(), exception); }
     return userDto;
   }
